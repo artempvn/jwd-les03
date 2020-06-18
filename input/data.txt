@@ -1,0 +1,10 @@
+20 steel red
+20 steel black
+5.5 wood blue
+20 steel red
+20 steel black
+20 steel red
+5.5 wood black
+5.5 blue wood
+1080000 3000
+
