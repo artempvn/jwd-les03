@@ -2,11 +2,12 @@ package by.artempvn.les03.entity;
 
 public class Ball {
 
-	private double radiusCentimeters;
-	private Color color;
-	private Material material;
+	private final double radiusCentimeters;
+	private final CustomColor color;
+	private final Material material;
 
-	public Ball(double radiusCentimeters, Color color, Material material) {
+	public Ball(double radiusCentimeters, CustomColor color,
+			Material material) {
 		this.radiusCentimeters = radiusCentimeters;
 		this.color = color;
 		this.material = material;
@@ -16,7 +17,7 @@ public class Ball {
 		return radiusCentimeters;
 	}
 
-	public Color getColor() {
+	public CustomColor getColor() {
 		return color;
 	}
 

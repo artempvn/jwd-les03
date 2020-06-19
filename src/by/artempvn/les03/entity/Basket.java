@@ -8,9 +8,9 @@ import by.artempvn.les03.exception.CustomException;
 import by.artempvn.les03.validator.CheckBasket;
 
 public class Basket {
-	private double volumeCapacity;
-	private double weightCapacity;
-	private ArrayList<Ball> balls = new ArrayList<Ball>();
+	private final double volumeCapacity;
+	private final double weightCapacity;
+	private final ArrayList<Ball> balls = new ArrayList<Ball>();
 
 	public Basket(double volumeCapacity, double weightCapacity) {
 		this.volumeCapacity = volumeCapacity;
@@ -38,23 +38,18 @@ public class Basket {
 				balls.add(ball);
 				wasAdded = true;
 			}
-		} else {
-			throw new CustomException("Incorrect input (null)");
 		}
 		return wasAdded;
 	}
 
-	public boolean removeBall(Ball ball) throws CustomException {
+	public boolean removeBall(Ball ball) {
 		boolean isRemoved = false;
 		if (ball != null) {
 			if (balls.contains(ball)) {
 				balls.remove(ball);
 				isRemoved = true;
 			}
-		} else {
-			throw new CustomException("Incorrect input (null)");
 		}
-
 		return isRemoved;
 	}
 

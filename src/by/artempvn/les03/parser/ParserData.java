@@ -2,9 +2,8 @@ package by.artempvn.les03.parser;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import by.artempvn.les03.validator.CheckType;
-import by.artempvn.les03.entity.Color;
+import by.artempvn.les03.entity.CustomColor;
 import by.artempvn.les03.entity.Material;
 import by.artempvn.les03.exception.CustomException;
 
@@ -63,8 +62,8 @@ public class ParserData {
 		return material;
 	}
 
-	public Color findColor(String input) throws CustomException {
-		Color color = null;
+	public CustomColor findColor(String input) throws CustomException {
+		CustomColor color = null;
 		if (input != null) {
 			String parsedString = "";
 			CheckType checkType = new CheckType();
@@ -75,7 +74,7 @@ public class ParserData {
 				parsedString = input.substring(matcherColor.start(),
 						matcherColor.end());
 				if (checkType.isCorrectColor(parsedString)) {
-					color = Color.valueOf(parsedString.toUpperCase());
+					color = CustomColor.valueOf(parsedString.toUpperCase());
 					isColor = true;
 				}
 			}

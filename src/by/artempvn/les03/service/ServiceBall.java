@@ -2,7 +2,6 @@ package by.artempvn.les03.service;
 
 import by.artempvn.les03.entity.Ball;
 import by.artempvn.les03.exception.CustomException;
-
 import static java.lang.Math.*;
 
 public class ServiceBall {

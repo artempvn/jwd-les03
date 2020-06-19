@@ -1,7 +1,7 @@
 package by.artempvn.les03.creator;
 
 import by.artempvn.les03.entity.Ball;
-import by.artempvn.les03.entity.Color;
+import by.artempvn.les03.entity.CustomColor;
 import by.artempvn.les03.entity.Material;
 import by.artempvn.les03.exception.CustomException;
 import by.artempvn.les03.parser.ParserData;
@@ -15,7 +15,7 @@ public class BallCreator {
 		if (data != null) {
 			if (data.matches(BALL_REGEX)) {
 				ParserData parser = new ParserData();
-				Color color = parser.findColor(data);
+				CustomColor color = parser.findColor(data);
 				Material material = parser.findMaterial(data);
 				double radius = parser.findDouble(data);
 				CheckBall checkBall = new CheckBall();

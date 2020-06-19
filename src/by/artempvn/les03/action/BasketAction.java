@@ -19,11 +19,11 @@ public class BasketAction {
 				try {
 					balls.add(ballCreator.create(input));
 				} catch (CustomException e) {
-					// TODO add log when it'll be learned
+					// TODO place for logger, didn't study yet
 				}
 			}
 			if (balls.size() == 0) {
-				throw new CustomException("Incorrect data to create ball");
+				throw new CustomException("Incorrect data to create any ball");
 			}
 		} else {
 			throw new CustomException("Incorrect input (null)");
@@ -39,7 +39,7 @@ public class BasketAction {
 				try {
 					basket = basketCreator.create(input);
 				} catch (CustomException e) {
-					// TODO add log when it'll be learned
+					// TODO place for logger, didn't study yet
 				}
 			}
 			if (basket == null) {

@@ -3,7 +3,7 @@ package by.artempvn.les03.service;
 import by.artempvn.les03.exception.CustomException;
 import by.artempvn.les03.entity.Ball;
 import by.artempvn.les03.entity.Basket;
-import by.artempvn.les03.entity.Color;
+import by.artempvn.les03.entity.CustomColor;
 
 public class ServiceBasket {
 
@@ -20,8 +20,7 @@ public class ServiceBasket {
 		return volumeNetto;
 	}
 
-	public double calculateCurrentWeight(Basket basket) 
-			throws CustomException {
+	public double calculateCurrentWeight(Basket basket) throws CustomException {
 		if (basket == null) {
 			throw new CustomException("Incorrect input (null)");
 		}
@@ -33,7 +32,7 @@ public class ServiceBasket {
 		return weight;
 	}
 
-	public int calculateNumberOfBallsByColor(Basket basket, Color color)
+	public int calculateNumberOfBallsByColor(Basket basket, CustomColor color)
 			throws CustomException {
 		if (basket == null || color == null) {
 			throw new CustomException("Incorrect input (null)");
